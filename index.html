@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utsav Mullick</title>
+  <meta name="description" content="Website Under Construction - umullick.in" />
+  <title>umullick.in - Under Construction</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* Reset default margins */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #111;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
     }
-
-    p {
-      font-size: 1.1rem;
-      color: #aaa;
-      margin-bottom: 2rem;
+    .loader {
+      border: 6px solid #2e2e2e;
+      border-top: 6px solid #facc15;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      animation: spin 1.1s linear infinite;
+      margin: auto;
     }
-
-    a {
-      color: #00ccff;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border 0.2s ease;
-    }
-
-    a:hover {
-      border-bottom: 1px solid #00ccff;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
-<body>
-  <h1>Hello, I'm Utsav Mullick</h1>
-  <p>Building things. Learning always. Coming soon...</p>
-  <p>
-    <a href="https://github.com/utsavmullick" target="_blank">GitHub</a> &nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/utsavmullick/" target="_blank">LinkedIn</a>
-  </p>
+
+<body class="text-white flex items-center justify-center min-h-screen px-6 relative overflow-hidden">
+  <!-- Animated Background Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-white/5 to-transparent pointer-events-none blur-3xl opacity-30 animate-pulse"></div>
+
+  <div class="text-center max-w-xl z-10">
+    <!-- Logo / Title -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-yellow-400 drop-shadow-lg">umullick.in</h1>
+
+    <!-- Animated Loader -->
+    <div class="loader mb-6"></div>
+
+    <!-- Fun Under Construction Message -->
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+      This is still under construction 🏗️
+      <br class="hidden md:inline"/>We’re polishing pixels and optimizing vibes.
+    </p>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mwkgrylw" method="POST" class="bg-gray-900/80 p-8 rounded-xl shadow-2xl backdrop-blur-lg space-y-4">
+      <p class="text-lg mb-2 text-white">Leave your coordinates 📬 and we’ll ping you before launch 🚀</p>
+      <input type="email" name="email" placeholder="you@example.com" required class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" />
+      <textarea name="message" rows="3" placeholder="Your message..." class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400"></textarea>
+      <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-3 px-6 rounded hover:bg-yellow-300 transition shadow-md">
+        Send Message
+      </button>
+    </form>
+
+    <p class="text-sm text-gray-500 mt-6">© 2025 umullick.in — Grand reveal coming soon</p>
+  </div>
 </body>
+
 </html>
