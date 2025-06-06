@@ -2,67 +2,97 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Website Under Construction - umullick.in" />
-  <title>umullick.in - Under Construction</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>umullick.in — 静かに準備中</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+      background-color: #fdfaf6;
+      color: #1f1f1f;
+      position: relative;
+      overflow: hidden;
     }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
+    h1, h2 {
+      font-family: 'Noto Serif JP', serif;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .loader {
-      border: 6px solid #2e2e2e;
-      border-top: 6px solid #facc15;
-      border-radius: 50%;
       width: 48px;
       height: 48px;
-      animation: spin 1.1s linear infinite;
-      margin: auto;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #8c1f11;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 2rem auto;
     }
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      to { transform: rotate(360deg); }
+    }
+    .paper-texture {
+      background-image: url('https://www.transparenttextures.com/patterns/fibers.png');
+      background-repeat: repeat;
+      background-size: contain;
+    }
+    .ink-stroke {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/ICX3sDs.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.06;
+      pointer-events: none;
+      animation: floatInk 20s ease-in-out infinite alternate;
+    }
+    @keyframes floatInk {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-30px) scale(1.02); }
+    }
+    .kanji-mark {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3rem;
+      color: #b93b3b;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      opacity: 0.5;
     }
   </style>
 </head>
 
-<body class="text-white flex items-center justify-center min-h-screen px-6 relative overflow-hidden">
-  <!-- Animated Background Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-white/5 to-transparent pointer-events-none blur-3xl opacity-30 animate-pulse"></div>
+<body class="flex items-center justify-center min-h-screen px-6 paper-texture">
+  <div class="ink-stroke"></div>
+  <div class="kanji-mark">夢</div>
 
-  <div class="text-center max-w-xl z-10">
-    <!-- Logo / Title -->
-    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-yellow-400 drop-shadow-lg">umullick.in</h1>
-
-    <!-- Animated Loader -->
-    <div class="loader mb-6"></div>
-
-    <!-- Fun Under Construction Message -->
-    <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-      This is still under construction 🏗️
-      <br class="hidden md:inline"/>We’re polishing pixels and optimizing vibes.
+  <main class="text-center max-w-xl fade-in z-10">
+    <h1 class="text-4xl md:text-5xl font-medium mb-4 text-[#2b2b2b] tracking-tight">
+      umullick.in
+    </h1>
+    <div class="text-sm uppercase tracking-widest text-[#7d7d7d] mb-8">
+      静かに準備中 — Quietly in the works
+    </div>
+    <div class="loader"></div>
+    <p class="text-md md:text-lg text-[#444] mt-4 leading-relaxed">
+      A calm space is being prepared.<br>
+      Beauty takes time. Precision takes longer.<br>
+      We appreciate your quiet patience.
     </p>
-
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/mwkgrylw" method="POST" class="bg-gray-900/80 p-8 rounded-xl shadow-2xl backdrop-blur-lg space-y-4">
-      <p class="text-lg mb-2 text-white">Leave your coordinates 📬 and we’ll ping you before launch 🚀</p>
-      <input type="email" name="email" placeholder="you@example.com" required class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" />
-      <textarea name="message" rows="3" placeholder="Your message..." class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400"></textarea>
-      <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-3 px-6 rounded hover:bg-yellow-300 transition shadow-md">
-        Send Message
-      </button>
-    </form>
-
-    <p class="text-sm text-gray-500 mt-6">© 2025 umullick.in — Grand reveal coming soon</p>
-  </div>
+    <audio autoplay loop>
+      <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_3785e93fa4.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="text-xs text-[#999] mt-10">© 2025 umullick.in — All rights reserved</p>
+  </main>
 </body>
 
 </html>
